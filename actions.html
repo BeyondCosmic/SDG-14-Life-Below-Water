@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/styles.css"> <!-- Links CSS file -->
+    </head>
+    <body>
+        <header>
+            <img src="images/SDG_logo.png" class="nav_image">
+
+            <nav class="navigation" id="navLinks">
+                <a href="index.html">Home Page</a>
+                <a href="statistics.html">Statistics</a>
+                <a href="actions.html">Actions</a>
+                <a href="https://globalgoals.org/goals/14-life-below-water/">Offical Website</a>  
+            </nav>
+            
+                <img src="images/Moon_DarkMode.svg" id="DarkModeIcon" onclick="ToggleDark()" alt="Toggle Dark Mode" class="darkmode_btns" width="32">
+                
+                <button class="menu_btn" onclick="ToggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false"> ☰ </button>
+        </header>
+
+        <main>
+            <section class="SDG">
+                <figure class="LBW_figure">
+                    <img src="images/Life_Below_Water_Emblem.png" alt="SDG 14: Life Below Water Emblem" class="Emblem_img">
+                </figure>
+                
+                <header class="LDW_header_text">
+                    <h1 class="AMH">Things to Do and Actions to Take</h1>
+                </header>
+            </section>
+
+            <section>
+                <h1 class="action_h1">WHAT ACTIONS CAN YOU TAKE?</h1>
+                <h2 class="action_h2">No need to start big, After all big changes starts with a small step.</h2>
+            </section>
+
+            <section class="take_action">
+                <article>
+                    <h1 class="home_h1">Reduce Plastic Pollution</h1>
+                    <ul class="TA_ul">
+                        <li>Use reusable shopping bags and water bottles.</li>
+                        <li>Avoid single-use plastics, such as straws and plastic cutlery.</li>
+                        <li>Separate recyclable waste from general rubbish.</li>
+                        <li>Never throw rubbish into drains, rivers or the sea.</li>
+                    </ul>
+
+                    <figure>
+                        <img src="images/reduce-plastic-pollution_2.jpg" alt="Image of plastic pollution.">
+                    </figure>
+                </article>
+
+                <article>
+                    <h1 class="home_h1">Participate in Beach and Coastal Cleanups</h1>
+                    <ul class="TA_ul">
+                        <li>Join organised beach-cleanup activities.</li>
+                        <li>Collect litter safely using gloves and appropriate equipment.</li>
+                        <li>Encourage schools and communities to organise cleanup events.</li>
+                        <li>Record and report pollution to the appropriate local authorities.</li>
+                    </ul>
+
+                    <figure>
+                        <img src="images/Reduce_Plastic_Pollution.jpg" alt="Image of someone picking up a plastic bottle.">
+                    </figure>
+                </article>
+
+                <article>
+                    <h1 class="home_h1">Protect Marine Animals and Coral Reefs</h1>
+                    <ul class="TA_ul">
+                        <li>Never touch, stand on or break coral reefs.</li>
+                        <li>Observe marine animals from a safe and respectful distance.</li>
+                        <li>Avoid purchasing products made from threatened marine species.</li>
+                        <li>Support marine conservation and habitat restoration projects.</li>
+                    </ul>
+
+                    <figure>
+                        <img src="images/coral-reefs.jpg" alt="Image of a coral reef and marine life.">
+                    </figure>
+                </article>
+
+                <article>
+                    <h1 class="home_h1">Support Sustainable Fishing</h1>
+                    <ul class="TA_ul">
+                        <li>Choose seafood from responsible and traceable sources when possible.</li>
+                        <li>Follow fishing regulations, including size limits and seasonal restrictions.</li>
+                        <li>Avoid buying illegally caught or threatened species.</li>
+                        <li>Avoid buying illegally caught or threatened species.</li>
+                    </ul>
+    
+                    <figure>
+                        <img src="images/sustainable_fishing.jpg" alt="Image of a fishing net.">
+                    </figure>
+                </article>
+
+
+                <article>
+                    <h1 class="home_h1">Prevent Water Pollution</h1>
+                    <ul class="TA_ul">
+                        <li>Dispose of chemicals, oils and medicines properly.</li>
+                        <li>Never pour harmful substances into drains or waterways.</li>
+                        <li>Reduce fertiliser and pesticide runoff where possible.</li>
+                        <li>Report illegal dumping and sewage pollution.</li>
+                    </ul>
+
+                    <figure>
+                        <img src="images/prevent-water-pollution.jpg" alt="Image of water pollution.">
+                    </figure>
+                </article>
+
+                <article>
+                    <h1 class="home_h1">Educate Others and Support Conservation</h1>
+                    <ul class="TA_ul">
+                        <li>Share reliable information about ocean conservation.</li>
+                        <li>Organise environmental awareness campaigns at school.</li>
+                        <li>Support organisations working to protect marine ecosystems.</li>
+                        <li>Encourage communities to reduce waste and protect local waterways.</li>
+                    </ul>
+
+                    <figure>
+                        <img src="images/whale.jpg" alt="Image of a humpback whale.">
+                    </figure>
+                </article>
+            </section>
+
+            <section>
+                <h1 class="action_h1">TAKE A QUIZ</h1>
+            </section>
+
+            <section>
+                <h2 class="quiz_h2">Test Your Knowledge!</h1>
+                <h2 class="quiz_h2">Click each question to reveal the answer.</h2>
+            </section>
+
+            <section class="quiz_accordion">
+                <article class="accordion_item">
+                    <h3> 
+                        <button class="accordion_btn" aria-expanded="false" aria-controls="answer1" id="question1">
+                            What is SDG 14?
+                            <span class="accordion_icon" aria-hidden="true">+</span>
+                        </button>
+                    </h3>
+
+                    <section class="accordion_content" id="answer1" role="region" aria-labelledby="question1" hidden>
+                        <p>SDG 14 aims to conserve and sustainably use the oceans, seas and marine resources.</p>
+                    </section>
+                </article>
+                         
+                <article class="accordion_item">
+                    <h3> 
+                        <button class="accordion_btn" aria-expanded="false" aria-controls="answer2" id="question2">
+                            How does plastic pollution harm marine life?
+                            <span class="accordion_icon" aria-hidden="true">+</span>
+                        </button>
+                    </h3>
+
+                    <section class="accordion_content" id="answer2" role="region" aria-labelledby="question2" hidden>
+                        <p>Marine animals may mistake plastic for food, become entangled in plastic waste, or be harmed by the pollution in their habitats.</p>
+                    </section>
+                </article>
+
+                <article class="accordion_item">
+                    <h3> 
+                        <button class="accordion_btn" aria-expanded="false" aria-controls="answer3" id="question3">
+                        Why are coral reefs important?
+                        <span class="accordion_icon" aria-hidden="true">+</span>
+                        </button>
+                    </h3>
+
+                    <section class="accordion_content" id="answer3" role="region" aria-labelledby="question3" hidden>
+                        <p>Coral reefs provide habitats for marine life, support biodiversity, and help protect coastlines.</p>
+                    </section>
+                </article>
+
+                <article class="accordion_item">
+                     <h3> 
+                        <button class="accordion_btn" aria-expanded="false" aria-controls="answer4" id="question4">
+                            How can we help protect the ocean?
+                            <span class="accordion_icon" aria-hidden="true">+</span>
+                        </button>
+                    </h3>
+
+                    <section class="accordion_content" id="answer4" role="region" aria-labelledby="question4" hidden>
+                        <p>We can reduce single-use plastics, dispose of waste properly, participate in coastal cleanups, and support marine conservation.</p>
+                    </section>
+                </article>
+            </section>
+            
+        </main>
+
+        <footer>
+            <a href="mailto:recipient@example.com" class="email_link">Send Email</a>
+            <p class="copyright">&copy; Gabriel Durity, 2026</p>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

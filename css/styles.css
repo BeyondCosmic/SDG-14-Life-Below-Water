@@ -1,0 +1,724 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0%;
+    /*background: linear-gradient(135deg, #7fe5f0, #4ca1af, #2c3e50);*/
+}
+
+.dark_mode {
+    /*background-image: linear-gradient(#0a4798,#0e203a );*/
+    background: #0b4b73;
+}
+
+/* ======================================================================================================
+                                                    MAIN  
+========================================================================================================= */
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;              
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.nav_image {
+    width: 190px;
+    height: 70px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ____________ Navigation Links ____________ */
+
+.navigation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation a {
+    padding: 24px 12px;
+    text-decoration: none;
+    white-space: nowrap;    
+    transition: 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    transform: scale(1.05);
+}
+
+.navigation a:active {
+    background: #337ee7;
+    color: #ffffff;
+}
+
+/* ____________ NAVBAR DARK MODE ____________ */
+
+.header_D {
+    background-color: #0b4b73;
+
+}
+
+.navigation_D a {
+    color: white;
+}
+
+.navigation_D a:active {
+    background: #0b2549;
+    color: #ffffff;
+}
+
+/* ___________________________________________ */
+
+/* ________________________________________________________________ */
+
+/* ____________ DARK THEME BUTTON ____________ */
+
+#DarkModeIcon {
+    width: 32px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.darkmode_btns {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.darkmode_btns:hover {
+    transform: scale(1.05);
+}
+
+.darkmode_btns img {
+    cursor: pointer;
+}
+
+/* ___________________________ */
+
+.menu_btn {
+    display: none;
+}
+
+/* _______ MOBILE NAVBAR ________ */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        min-height: 65px;
+        padding: 0 12px;
+    }
+
+    .nav_image {
+        width: 100px;
+        height: 60px;
+        margin-right: auto;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        transform: none;
+        flex-direction: column;
+        align-items: stretch;
+        background-color: #ffffff;
+        z-index: 1000;
+        box-shadow: 0 4px 8px #00000020;
+        gap: 0;
+    }
+
+    .navigation a {
+        padding: 15px 20px;
+        text-align: center;
+        border-top: 1px solid #dddddd;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .menu_btn {
+        display: block;
+        border: none;
+        background: transparent;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 4px;
+        margin-left: 12px;
+    }
+
+    @media screen and (min-width: 769px) {
+        .menu.btn {
+            display: none;
+        }
+    }
+
+    /* ________ MOBILE NAVBAR DARK MODE _______ */
+
+    .navigation_D {
+        background-color: #093f60;
+
+    }
+
+    .navigation_D a {
+        color: white;
+    }
+
+    .navigation_D a:active {
+        background: #0b2549;
+        color: #ffffff;
+    }
+
+/* __________________________________________ */
+}
+
+
+
+/* _______________________________________________________ */
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+.home_page_para {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 24px;
+    padding: 18px;
+}
+
+/* ____________ SDG 14's logo and text ____________ */
+
+.SDG {
+    background-color: #0792e1;
+    min-height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.SDG_D {                                       /* NAVBAR DARK MODE */
+    background-color: #011f31;
+}
+
+
+.LBW_figure {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.LBW_img {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+.LDW_header_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /*margin-right: 200px;*/
+    background-color: transparent;
+}
+
+.SDG_h1,
+.SDG_h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    color: #FFFFFF;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.home_h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .SDG {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .LBW_img {
+        width: 90px;
+    }
+
+    /*.LDW_header_text {
+        background-color: transparent;
+    }*/
+
+    .SDG_h1,
+    .SDG_h2 {
+        font-size: 18px;
+    }
+}
+
+/* ____________ HOME PAGE TEXT DARK MODE ____________ */
+
+.home_page_para_D {
+    color: #e9e8e8;
+}
+
+.home_h1_D {
+    color: white
+}
+
+/* ___________________________________________ */
+
+/* ________________________________________ */
+
+/* ______________ ABOUT SECTION _______________ */
+
+.about {
+    width: 100%;
+    background-color: #0481ca;
+    padding-bottom: 15px;
+}
+
+.coralreef {
+    display: block;
+    width: 100%;
+    height: 500px;
+    max-width: 100%;
+    object-fit: fill;
+    margin: 0;
+    padding: 0;
+
+}
+
+.about figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .coralreef {
+        display: block;
+        width: 100%;
+        height: 400px;
+        max-width: none;
+        object-fit: cover;
+        max-height: 300px;
+    }
+}
+
+.about_h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.about_para {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 24px;
+    padding: 18px;
+    color: white;
+}
+/* ________ ABOUT SECTION DARK MODE _______ */
+
+.about_D {
+    background-color: #093f60;
+}
+
+.about_para_D {
+    color: #e9e8e8;
+}
+
+/* ________________________________________ */
+
+@media screen and (max-width: 600px) {
+    .about_h1 {
+        font-size: 30px;
+    }
+}
+
+/* ___________________________________________ */
+
+
+/* ====================================================================================================== */
+
+
+/* ======================================================================================================
+                                            STATISTICS  
+========================================================================================================= */
+
+.SDG14_h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    color: #FFFFFF;
+    font-size: 40px;
+    padding: 0;
+    margin-right: 120px;
+}
+
+.Emblem_img {
+    width: 180px;
+}
+
+@media screen and (max-width: 600px) {
+    .Emblem_img {
+    width: 120px;
+    }
+
+    .SDG14_h1 {
+    font-size: 30px;
+    margin: 0;
+    margin-top: 20px;
+    }
+}
+
+/* ___________ GRID __________ */
+
+.stat_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.stat_grid article {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+    /*background-color: #093f60;*/
+    background-color: #a0dcff;
+    border-radius: 10px;
+    min-width: 0;
+}
+
+.stat_grid p {
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .stat_grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* ____________________________ */
+
+.stat_grid article figure {
+    width: 100%;
+    margin: 0;
+    margin-top: auto;
+}
+
+.stat_grid article img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ___________ DARKMODE ___________ */
+
+.stat_grid_D article {
+    background-color: #093f60;
+}
+
+/* ________________________________ */
+
+
+/* ====================================================================================================== */
+
+
+/* ======================================================================================================
+                                            ACTION  
+========================================================================================================= */
+
+.AMH {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    color: #FFFFFF;
+    font-size: 40px;
+    padding: 0;
+    margin-right: 120px;
+}
+
+.action_h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.action_h2 {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;  
+}
+
+@media screen and (max-width: 600px) {
+    .AMH {
+    font-size: 30px;
+    margin: 0;
+    }
+}
+
+/* ___________ GRID __________ */
+
+.take_action {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.take_action article {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+    /*background-color: #093f60;*/
+    background-color: #a0dcff;
+    border-radius: 10px;
+    min-width: 0;
+}
+
+.TA_ul {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.take_action article figure {
+    width: 100%;
+    margin: 0;
+    margin-top: auto;
+}
+
+.take_action article img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .take_action {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .take_action article figure {
+    width: 100%;
+    margin: 0;
+    margin-top: auto;
+    }
+
+    .take_action article img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ____________________________ */
+
+/* ___________ DARKMODE ___________ */
+
+.action_D {
+    color: white;
+}
+
+.take_action_D article {
+    background-color: #093f60;
+}
+
+.take_action_D .TA_ul {
+    color: #e9e8e8;
+}
+
+/* ________________________________ */
+
+
+/* ______________ QUIZ ______________ */
+
+.quiz_h2 {
+     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;  
+}
+
+.quiz_accordion {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.quiz_header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.accordion_item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #a0dcff;
+}
+
+.accordion_item h3 {
+    margin: 0;
+}
+
+.accordion_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+    color: #093f60;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+.accordion_btn:hover {
+    background-color: #7cccf5;
+}
+
+.accordion_btn:focus-visible {
+    outline: 3px solid #093f60;
+    outline-offset: -3px;
+}
+
+.accordion_icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.accordion_content {
+    padding: 0 20px 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.accordion_content p {
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .quiz_accordion {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .quiz_header h2 {
+        font-size: 26px;
+    }
+
+    .accordion_btn {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .accordion_content {
+        padding: 0 15px 15px;
+        font-size: 16px;
+    }
+}
+
+/* ___________ DARKMODE ___________ */
+
+.accordion_item_D {
+    background-color: #093f60;
+}
+
+.accordion_item_D .accordion_btn {
+    color: white;
+}
+
+.accordion_item_D .accordion_btn:hover {
+    background-color: #0b2549;
+}
+
+.accordion_item_D .accordion_content {
+    color: white;
+}
+
+.quiz_h2_D {
+    color: #e9e8e8;
+}
+
+/* ________________________________ */
+
+/* __________________________________ */
+
+/* ====================================================================================================== */
+
+
+
+/* ======================================================================================================
+                                            FOOTER  
+========================================================================================================= */
+
+footer {
+    width: 100%;
+    padding: 26px 12px 12px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 0px;
+    border-top: 2px solid #9090907f;
+}
+
+.footer_dark_mode {
+    /*background-color: #183f70; */ 
+    background-color: #011f31;
+}
+
+.email_link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+     margin-top: 12px;
+    padding: 8px;
+    width: 100px;
+    background-color: #41a6e0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.email_link:hover {
+    background-color: #229ee6;
+}
+
+.copyright_D {
+    color: white;
+}
+
+/* ====================================================================================================== */
